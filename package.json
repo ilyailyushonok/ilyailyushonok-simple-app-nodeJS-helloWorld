@@ -1,0 +1,24 @@
+{
+  "name": "simple-express-app",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "dev:debug": "nodemon --inspect dist/index.js",
+    "watch": "tsc -w",
+    "start": "concurrently \"yarn watch\" \"yarn dev\"",
+    "debug": "concurrently \"yarn watch\" \"yarn dev:debug\""
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.14",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "concurrently": "^8.2.2"
+  }
+}
